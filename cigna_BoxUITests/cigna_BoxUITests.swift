@@ -9,29 +9,29 @@
 import XCTest
 
 class cigna_BoxUITests: XCTestCase {
-        
-    override func setUp() {
-        super.setUp()
-        
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
+  
+  override func setUp() {
+    super.setUp()
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
+    // Put setup code here. This method is called before the invocation of each test method in the class.
     
-    func testExample() {
-      
-   
-    }
+    // In UI tests it is usually best to stop immediately when a failure occurs.
+    continueAfterFailure = false
+    // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
+    XCUIApplication().launch()
+    
+    // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+  }
+  
+  override func tearDown() {
+    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    super.tearDown()
+  }
+  
+  func testExample() {
+    
+    
+  }
   
   func testEmptyTextfield() {
     
@@ -44,7 +44,7 @@ class cigna_BoxUITests: XCTestCase {
     
     let emptyAlert = app.alerts
     XCTAssertTrue(emptyAlert.element.exists)
-    let emptyAlertText = emptyAlert.staticTexts["Count cannot be empty!!"]
+    let emptyAlertText = emptyAlert.staticTexts[AppConstants.emptyerrorMessage]
     XCTAssertTrue(emptyAlertText.exists)
     let okButton = emptyAlert.buttons["OK"]
     XCTAssertTrue(okButton.exists)
@@ -60,12 +60,12 @@ class cigna_BoxUITests: XCTestCase {
     submitButton.tap()
     let countAlert = app.alerts
     XCTAssertTrue(countAlert.element.exists)
-    let countAlertText = countAlert.staticTexts[String(format:"Enter a count less than or equal to %@",AppConstants.maxCount)]
+    let countAlertText = countAlert.staticTexts[String(format:AppConstants.countlimitMessage,AppConstants.maxCount)]
     XCTAssertTrue(countAlertText.exists)
     let okButton = countAlert.buttons["OK"]
     XCTAssertTrue(okButton.exists)
-
-
+    
+    
   }
   
   
@@ -84,7 +84,7 @@ class cigna_BoxUITests: XCTestCase {
     let thirdBox = collectionViewsQuery.children(matching: .cell).element(boundBy: 2).children(matching: .other).element.children(matching: .other).element
     XCTAssertTrue(thirdBox.exists)
     app.buttons["Clear text"].tap()
-
+    
     
     
   }
