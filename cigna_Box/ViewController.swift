@@ -23,7 +23,8 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
  
   @IBAction func submitAction(_ sender: Any) {
     if countTextfield.text == "" {
-       boxCount = 0
+       //box count
+      boxCount = 0
       boxCollectionView.reloadData()
       let alertController = UIAlertController(title: "", message: "Count cannot be empty!!", preferredStyle: UIAlertControllerStyle.alert)
       let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
