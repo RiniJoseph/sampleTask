@@ -60,7 +60,7 @@ class cigna_BoxUITests: XCTestCase {
     submitButton.tap()
     let countAlert = app.alerts
     XCTAssertTrue(countAlert.element.exists)
-    let countAlertText = countAlert.staticTexts[String(format:"Enter a count less than %@",AppConstants.maxCount)]
+    let countAlertText = countAlert.staticTexts[String(format:"Enter a count less than or equal to %@",AppConstants.maxCount)]
     XCTAssertTrue(countAlertText.exists)
     let okButton = countAlert.buttons["OK"]
     XCTAssertTrue(okButton.exists)

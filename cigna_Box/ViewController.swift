@@ -36,7 +36,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
       boxCount = 0
       boxCollectionView.reloadData()
       countTextfield.text = ""
-      let alertController = UIAlertController(title: "", message: String(format:"Enter a count less than %@",AppConstants.maxCount), preferredStyle: UIAlertControllerStyle.alert)
+      let alertController = UIAlertController(title: "", message: String(format:"Enter a count less than or equal to %@",AppConstants.maxCount), preferredStyle: UIAlertControllerStyle.alert)
       
       let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
         (result : UIAlertAction) -> Void in
