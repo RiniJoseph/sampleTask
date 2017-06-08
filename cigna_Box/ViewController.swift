@@ -16,6 +16,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
   @IBOutlet weak var submitButton: UIButton!
   override func viewDidLoad() {
     super.viewDidLoad()
+    countTextfield.keyboardType = UIKeyboardType.numberPad
     // Do any additional setup after loading the view, typically from a nib.
   }
 
@@ -23,7 +24,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
   @IBAction func submitAction(_ sender: Any) {
     if countTextfield.text == "" {
        boxCount = 0
-       boxCollectionView.reloadData()
+      boxCollectionView.reloadData()
       let alertController = UIAlertController(title: "", message: "Count cannot be empty!!", preferredStyle: UIAlertControllerStyle.alert)
       let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
         (result : UIAlertAction) -> Void in
@@ -31,11 +32,11 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
       }
       alertController.addAction(okAction)
       self.present(alertController, animated: true, completion: nil)
-    } else if Int(countTextfield.text ?? "")! > 10 {
+    } else if Int(countTextfield.text ?? "")! > Int(AppConstants.maxCount)! {
       boxCount = 0
       boxCollectionView.reloadData()
       countTextfield.text = ""
-      let alertController = UIAlertController(title: "", message: "Enter a count less than 10", preferredStyle: UIAlertControllerStyle.alert)
+      let alertController = UIAlertController(title: "", message: String(format:"Enter a count less than %@",AppConstants.maxCount), preferredStyle: UIAlertControllerStyle.alert)
       
       let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
         (result : UIAlertAction) -> Void in

@@ -15,6 +15,8 @@
 		2D0C691B1EE83F730048D7AC /* cigna_BoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0C691A1EE83F730048D7AC /* cigna_BoxTests.swift */; };
 		2D0C69261EE83F730048D7AC /* cigna_BoxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0C69251EE83F730048D7AC /* cigna_BoxUITests.swift */; };
 		2D0C69341EE842F40048D7AC /* BoxCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0C69331EE842F40048D7AC /* BoxCollectionViewCell.swift */; };
+		2DE67A631EE920300004B877 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE67A621EE920300004B877 /* AppConstants.swift */; };
+		2DE67A641EE92A8A0004B877 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE67A621EE920300004B877 /* AppConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 		2D0C69251EE83F730048D7AC /* cigna_BoxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cigna_BoxUITests.swift; sourceTree = "<group>"; };
 		2D0C69271EE83F730048D7AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D0C69331EE842F40048D7AC /* BoxCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxCollectionViewCell.swift; sourceTree = "<group>"; };
+		2DE67A621EE920300004B877 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 			children = (
 				2D0C69051EE83F730048D7AC /* AppDelegate.swift */,
 				2D0C69071EE83F730048D7AC /* ViewController.swift */,
+				2DE67A621EE920300004B877 /* AppConstants.swift */,
 				2D0C69091EE83F730048D7AC /* Main.storyboard */,
 				2D0C690C1EE83F730048D7AC /* Assets.xcassets */,
 				2D0C690E1EE83F730048D7AC /* LaunchScreen.storyboard */,
@@ -265,6 +269,7 @@
 				2D0C69081EE83F730048D7AC /* ViewController.swift in Sources */,
 				2D0C69341EE842F40048D7AC /* BoxCollectionViewCell.swift in Sources */,
 				2D0C69061EE83F730048D7AC /* AppDelegate.swift in Sources */,
+				2DE67A631EE920300004B877 /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D0C69261EE83F730048D7AC /* cigna_BoxUITests.swift in Sources */,
+				2DE67A641EE92A8A0004B877 /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +517,7 @@
 				2D0C692C1EE83F730048D7AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2D0C692D1EE83F730048D7AC /* Build configuration list for PBXNativeTarget "cigna_BoxTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +526,7 @@
 				2D0C692F1EE83F730048D7AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2D0C69301EE83F730048D7AC /* Build configuration list for PBXNativeTarget "cigna_BoxUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +535,7 @@
 				2D0C69321EE83F730048D7AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
